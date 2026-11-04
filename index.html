@@ -80,7 +80,7 @@
     </section>
 
     <section id="contact" class="section">
-      <h2>Contact</h2>
+      <h2>Nos contacts</h2>
       <div class="contact-grid">
         <article class="card contact-card">
           <span class="contact-icon" aria-hidden="true">
@@ -126,24 +126,23 @@
   <dialog id="orderDialog">
     <form method="dialog" id="orderForm" class="form">
       <div class="drawer-head">
-        <h2>Demande de commande</h2>
+        <h2>Finaliser ma commande</h2>
         <button class="icon" value="cancel" formnovalidate aria-label="Fermer">✕</button>
       </div>
-      <p class="muted">Démonstration sans paiement. Connectez un service conforme et publiez vos conditions de vente avant toute mise en production.</p>
-      <label>Nom complet <input name="fullname" required /></label>
-      <label>Adresse e-mail <input type="email" name="email" required /></label>
+      <p class="muted"></p>
+      <label>Nom (Pseudo)<input name="fullname" required /></label>
       <label>Téléphone <input type="tel" name="phone" /></label>
       <label>Adresse de livraison <textarea name="address"></textarea></label>
-      <label>Mode de livraison
+      <label>Type de livraison
         <select name="shipping">
           <option>Livraison</option>
           <option>Meet-up</option>
         </select>
       </label>
-      <label>Message <textarea name="message"></textarea></label>
+      <label>Message <textarea name="Information complementaire"></textarea></label>
       <label class="check"><input type="checkbox" name="consent" required /> J'accepte que mes informations soient utilisées pour traiter cette demande.</label>
-      <p class="total">Total estimé <strong id="orderTotal">0,00 EUR</strong></p>
-      <button class="btn" id="submitOrder" type="button">Préparer la demande</button>
+      <p class="total"> Total <strong id="orderTotal">0,00 EUR</strong></p>
+      <button class="btn" id="submitOrder" type="button">Commander 🛒 </button>
     </form>
   </dialog>
 
