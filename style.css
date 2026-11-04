@@ -544,3 +544,134 @@ footer{text-align:center;padding:2rem;color:var(--muted)}
   }
 }
 
+/* =========================================================
+   NAVIGATION PAR PAGES — CORNER69
+   Couleurs héritées automatiquement de theme.js
+   ========================================================= */
+
+.page-view[hidden] {
+  display: none !important;
+}
+
+.page-view {
+  min-height: 65vh;
+  animation: pageAppear .22s ease;
+}
+
+@keyframes pageAppear {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main {
+  padding-bottom: 105px;
+}
+
+.bottom-dock {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 3px;
+
+  padding: 9px 8px calc(9px + env(safe-area-inset-bottom));
+
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  border-top: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.dock-link {
+  min-width: 0;
+  min-height: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+
+  border: 1px solid transparent;
+  border-radius: 13px;
+  background: transparent;
+  color: var(--muted);
+
+  font: inherit;
+  font-size: .68rem;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dock-icon {
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.dock-link.active {
+  color: var(--text);
+  background: color-mix(in srgb, var(--primary) 18%, var(--surface));
+  border-color: var(--border);
+}
+
+.dock-link.active .dock-icon {
+  color: var(--accent);
+}
+
+.dock-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.about-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-card {
+  margin-bottom: 1rem;
+}
+
+.about-card h3 {
+  margin: .8rem 0;
+  color: var(--text);
+}
+
+.about-card p {
+  margin-top: .7rem;
+}
+
+@media (min-width: 761px) {
+  .bottom-dock {
+    left: 50%;
+    right: auto;
+    width: min(620px, 90vw);
+    transform: translateX(-50%);
+    bottom: 14px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 8px;
+    box-shadow: 0 8px 35px var(--glow);
+  }
+
+  main {
+    padding-bottom: 120px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-view {
+    animation: none;
+  }
+}
+
