@@ -674,4 +674,19 @@ main {
     animation: none;
   }
 }
+/* CORRECTION URGENTE — RESTAURER LES SECTIONS CORNER69 */
 
+main > section,
+main section,
+#video,
+#catalogue,
+#avis,
+#contact {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+[hidden] {
+  display: block !important;
+}
