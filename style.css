@@ -66,13 +66,16 @@ img{max-width:100%}
 h1{font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.05;margin:1rem 0}
 h1 em{background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:normal}
 .lead{font-size:1.2rem;color:var(--muted);margin-bottom:2rem}
-.hero-logo {
+.hero-logo{
   filter: drop-shadow(0 0 40px var(--primary));
 
   animation:
     logoEntrance 1.2s cubic-bezier(.18, .89, .32, 1.28) both,
     pulse 4s ease-in-out 1.2s infinite;
+
+  will-change: transform, opacity;
 }
+
 @keyframes logoEntrance {
   0% {
     opacity: 0;
